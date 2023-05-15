@@ -593,6 +593,10 @@
 
 
     <script>
+         let charSizeVar = charSpacingVar = lineHeightVar = 100;
+        if(window.innerWidth <= 768) {
+            charSizeVar = charSpacingVar = lineHeightVar = 30
+            }
         var w = c.width = window.innerWidth,
             h = c.height = window.innerHeight,
             ctx = c.getContext('2d'),
@@ -600,11 +604,12 @@
             hw = w / 2, // half-width
             hh = h / 2,
 
+            
             opts = {
                 strings: ['HAPPY', 'BIRTHDAY!', '15-05-2003', 'Minh Thùy'],
-                charSize: 100,
-                charSpacing: 100,
-                lineHeight: 100,
+                charSize: charSizeVar,
+                charSpacing: charSpacingVar,
+                lineHeight: lineHeightVar,
 
                 cx: w / 2,
                 cy: h / 2,
